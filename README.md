@@ -1,7 +1,7 @@
 # ECSE473 Modern Robotic Programming Laboratory 2
 The project directory structure is in this way as mentioned in Laboratory description:
 
-
+```
   navvis_description
   ├── CMakeLists.txt
   ├── package.xml
@@ -13,6 +13,6 @@ The project directory structure is in this way as mentioned in Laboratory descri
   │   ├── robot.urdf
   │   └── robot.xacro
   └── README.md
-
+```
 
 
