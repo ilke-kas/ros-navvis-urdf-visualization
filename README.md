@@ -30,14 +30,38 @@ In order to launch the project, you should already have:
   
   ```
 - Velodyne description
-```
-
-  sudo apt install ros-noetic-velodyne-description
-
-```
+  ```
+  
+    sudo apt install ros-noetic-velodyne-description
+  
+  ```
 ### View the Robot Description in rviz
+#### rviz with the joint_state_publisher GUI
+##### Launch by using the urdf file
+  ```
 
+    roslaunch navvis_description navvis_description.launch
 
+  ```
+##### Launch by using the xacro file
+  ```
+
+    roslaunch navvis_description navvis_description.launch use_xacro:=true
+
+  ```
+#### rviz with the joint_state_publisher GUI
+##### Launch by using the urdf file
+  ```
+
+    roslaunch navvis_description navvis_description.launch use_joint_state_publisher_gui:=false
+
+  ```
+##### Launch by using the xacro file
+  ```
+
+    roslaunch navvis_description navvis_description.launch use_xacro:=true use_joint_state_publisher_gui:=false
+
+  ```
 ## Authors
 
   - **Ilke Kas** - *PhD at ECSE* -
