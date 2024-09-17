@@ -37,6 +37,13 @@ In order to launch the project, you should already have:
     sudo apt install ros-noetic-velodyne-description
   
   ```
+### Available Parameters to use with display.launch
+
+The launch file takes three arguments:
+-  use_xacro:=(true|false) - whether the xacro file will be used to launch 
+-  file - file name
+-  use_joint_state_publisher_gui=(true|false)  whether the joint_state_publisher_gui will be used 
+
 ### View the Robot Description in rviz
 
 - #### rviz with the joint_state_publisher GUI
