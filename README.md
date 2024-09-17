@@ -1,6 +1,6 @@
 # ECSE473 Modern Robotic Programming Laboratory 2
 The project directory structure is in this way as mentioned in Laboratory description:
-''' bash
+'''bash
 navvis_description
 ├── CMakeLists.txt
 ├── package.xml
