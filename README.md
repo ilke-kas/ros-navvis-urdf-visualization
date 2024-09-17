@@ -39,25 +39,25 @@ In order to launch the project, you should already have:
   ```
 ### View the Robot Description in rviz
 
-#### rviz with the joint_state_publisher GUI
+- #### rviz with the joint_state_publisher GUI
 
-##### Launch by using the urdf file
+- ##### Launch by using the urdf file
 
   ```
 
     roslaunch navvis_description navvis_description.launch
 
   ```
-##### Launch by using the xacro file
+- ##### Launch by using the xacro file
 
   ```
 
     roslaunch navvis_description navvis_description.launch use_xacro:=true
 
   ```
-#### rviz with the joint_state_publisher GUI
+- #### rviz with the joint_state_publisher GUI
 
-##### Launch by using the urdf file
+- ##### Launch by using the urdf file
 
   ```
 
@@ -65,7 +65,7 @@ In order to launch the project, you should already have:
 
   ```
 
-##### Launch by using the xacro file
+- ##### Launch by using the xacro file
 
   ```
 
