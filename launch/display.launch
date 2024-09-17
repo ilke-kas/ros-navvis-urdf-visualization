@@ -1,0 +1,46 @@
+<launch>
+
+<!-- Create an argument to determine whether to use a XACRO or URDF file. -->
+<arg name="use_xacro" default="false" />
+
+<!-- Location of the RVIZ config file to use -->
+<arg name="rviz_config_file" default="$(find navvis_description)/config/config.rviz" />
+
+<!-- Create an argument to determine whether to switch between using joint_state_publisher_gui and joint_state_publisher -->
+<arg name="use_joint_state_publisher_gui" default="true" />
+
+<!-- The filename can be passed into the launch file to override the default. -->
+<arg if="$(arg use_xacro)" name="filename" default="robot.xacro" />
+<arg unless="$(arg use_xacro)" name="filename" default="robot.urdf" />
+
+<!-- The full path of the URDF/XACRO file can be passed into the launch file instead. -->
+<arg name="file" default="$(find navvis_description)/urdf/$(arg filename)" />
+
+<!-- Use the file argument as the name of the file used to set the /robot_description
+parameter on the parameter server -->
+<param if="$(arg use_xacro)" name="robot_description" command="$(find xacro)/xacro $(arg
+file)" />
+<param unless="$(arg use_xacro)" name="robot_description" textfile="$(arg file)" />
+
+<!-- Run the robot_state_publisher. -->
+<node pkg="robot_state_publisher" type="robot_state_publisher"
+name="robot_state_publisher" />
+
+<!-- Switch between using joint_state_publisher_gui and joint_state_publisher -->
+<node if="$(arg use_joint_state_publisher_gui)" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" />
+<node unless="$(arg use_joint_state_publisher_gui)" pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+
+<!-- Transform is added to the launch file  so that the wheels will
+show on the robot display when the joint_state_publisher_gui node is not running-->
+<node unless="$(arg use_joint_state_publisher_gui)" pkg="tf2_ros" type="static_transform_publisher" name="tf2_ros_wheel_left_joint" args="0.0 0.365 0.2 0.0 0.0 -1.57 base wheel_left_joint" />
+<node unless="$(arg use_joint_state_publisher_gui)" pkg="tf2_ros" type="static_transform_publisher" name="tf2_ros_wheel_right_joint" args="0.0 0.365 0.2 0.0 0.0 -1.57 base wheel_right_joint" />
+<node unless="$(arg use_joint_state_publisher_gui)" pkg="tf2_ros" type="static_transform_publisher" name="tf2_ros_wheel_center_joint" args="0.0 0.365 0.2 0.0 0.0 -1.57 base wheel_center_joint" />
+
+<!-- Rostopic is added when the joint_state_publisher_gui node is not running-->
+<node unless="$(arg use_joint_state_publisher_gui)" pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 /joint_states sensor_msgs/JointState '{header: {seq: 1, stamp: {secs: 1, nsecs: 0}, frame_id: 'base'}, name: ['base_wheel_left_joint', 'base_wheel_right_joint'], position: [0.0, 0.0], velocity: [0, 0], effort: [0, 0]}'"/>
+
+
+<!-- Run RVIZ with a configuration file. If RVIZ is closed, close everything. -->
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)" required="true"/>
+
+</launch>
