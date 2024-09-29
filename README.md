@@ -52,14 +52,14 @@ The launch file takes three arguments:
 
   ```
 
-    roslaunch navvis_description navvis_description.launch
+    roslaunch navvis_description display.launch
 
   ```
   - ##### Launch by using the xacro file
 
   ```
 
-    roslaunch navvis_description navvis_description.launch use_xacro:=true
+    roslaunch navvis_description display.launch use_xacro:=true
 
   ```
 - #### rviz with the joint_state_publisher GUI
@@ -68,7 +68,7 @@ The launch file takes three arguments:
 
   ```
 
-    roslaunch navvis_description navvis_description.launch use_joint_state_publisher_gui:=false
+    roslaunch navvis_description display.launch use_joint_state_publisher_gui:=false
 
   ```
 
@@ -76,7 +76,7 @@ The launch file takes three arguments:
 
   ```
 
-    roslaunch navvis_description navvis_description.launch use_xacro:=true use_joint_state_publisher_gui:=false
+    roslaunch navvis_description display.launch use_xacro:=true use_joint_state_publisher_gui:=false
 
   ```
 ## Authors
