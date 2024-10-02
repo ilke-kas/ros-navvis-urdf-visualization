@@ -65,4 +65,5 @@ show on the robot display when the joint_state_publisher_gui node is not running
 <!-- Run RVIZ with a configuration file. If RVIZ is closed, close everything. -->
 <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)" required="true"/>
 
+
 </launch>
