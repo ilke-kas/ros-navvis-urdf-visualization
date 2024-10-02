@@ -1,0 +1,20 @@
+<launch>
+
+  <!-- Argument to determine whether to use XACRO or URDF in the display.launch file -->
+  <arg name="use_xacro" default="true" />
+
+  <!-- Argument for the RVIZ config file to use -->
+  <arg name="rviz_config_file" default="$(find navvis_description)/config/config.rviz"/>
+  
+  <!-- The full path of the URDF/XACRO file can be passed into the launch file instead. -->
+<arg name="file" default="$(find navvis_playback)/urdf/navvis_bag_playback.xacro" />
+
+  <!-- Include the display.launch file from the previous lab, passing the required arguments -->
+  <include file="$(find navvis_description)/launch/display.launch">
+    <arg name="use_xacro" value="$(arg use_xacro)" />
+    <arg name="use_robot_state_publisher" value="false" />
+    <arg name="rviz_config_file" value="$(arg rviz_config_file)" />
+    <arg name="use_joint_state_publisher_gui" value="false" />
+  </include>
+
+</launch>
