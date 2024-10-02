@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
-<<<<<<< HEAD
 project(navvis_description)
-=======
-project(navvis_playback)
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
+
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -12,7 +9,6 @@ project(navvis_playback)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-<<<<<<< HEAD
   geometry_msgs
   rviz
   sensor_msgs
@@ -20,9 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
   xacro
   gazebo_plugins
   velodyne_description
-=======
-  navvis_description
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 )
 
 ## System dependencies are found with CMake's conventions
@@ -82,11 +75,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-<<<<<<< HEAD
 #   geometry_msgs#   sensor_msgs
-=======
 #   std_msgs  # Or other packages containing msgs
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 # )
 
 ################################################
@@ -120,13 +110,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-<<<<<<< HEAD
 #  LIBRARIES navvis_description
 #  CATKIN_DEPENDS geometry_msgs rviz sensor_msgs urdf xacro
-=======
 #  LIBRARIES navvis_playback
 #  CATKIN_DEPENDS navvis_description
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 #  DEPENDS system_lib
 )
 
@@ -143,11 +130,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-<<<<<<< HEAD
 #   src/${PROJECT_NAME}/navvis_description.cpp
-=======
-#   src/${PROJECT_NAME}/navvis_playback.cpp
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 # )
 
 ## Add cmake target dependencies of the library
@@ -158,11 +141,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-<<<<<<< HEAD
 # add_executable(${PROJECT_NAME}_node src/navvis_description_node.cpp)
-=======
-# add_executable(${PROJECT_NAME}_node src/navvis_playback_node.cpp)
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -226,11 +206,8 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-<<<<<<< HEAD
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_navvis_description.cpp)
-=======
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_navvis_playback.cpp)
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
+
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

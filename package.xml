@@ -1,14 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-<<<<<<< HEAD
   <name>navvis_description</name>
   <version>0.0.0</version>
   <description>The navvis_description package</description>
-=======
-  <name>navvis_playback</name>
-  <version>0.0.0</version>
-  <description>The navvis_playback package</description>
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
@@ -25,11 +19,8 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-<<<<<<< HEAD
+  
   <!-- <url type="website">http://wiki.ros.org/navvis_description</url> -->
-=======
-  <!-- <url type="website">http://wiki.ros.org/navvis_playback</url> -->
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
@@ -59,7 +50,7 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-<<<<<<< HEAD
+
   <build_depend>geometry_msgs</build_depend>
   <build_depend>rviz</build_depend>
   <build_depend>sensor_msgs</build_depend>
@@ -77,11 +68,6 @@
   <exec_depend>xacro</exec_depend>
   <exec_depend>gazebo_plugins</exec_depend>
   <exec_depend>velodyne_description</exec_depend>
-=======
-  <build_depend>navvis_description</build_depend>
-  <build_export_depend>navvis_description</build_export_depend>
-  <exec_depend>navvis_description</exec_depend>
->>>>>>> 5a3bc6980f68dc16afb59a681f4aa539ff3705f1
 
 
   <!-- The export tag contains other, unspecified, tags -->
