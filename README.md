@@ -57,6 +57,7 @@ The launch file takes three arguments:
 
   ```
   or by using some arguments:
+  
    ```
 
     roslaunch navvis_description display.launch use_xacro:=false use_robot_state_publisher:=true use_joint_state_publisher_gui:=true
@@ -85,6 +86,7 @@ The launch file takes three arguments:
 
   ```
      or by using some arguments:
+  
    ```
 
     roslaunch navvis_description display.launch use_xacro:=false use_robot_state_publisher:=true use_joint_state_publisher_gui:=false
@@ -99,11 +101,13 @@ The launch file takes three arguments:
 
   ```
      or by using some arguments:
+  
    ```
 
     roslaunch navvis_description display.launch use_xacro:=true use_robot_state_publisher:=true use_joint_state_publisher_gui:=false
 
   ```
+   
    - #### rviz without both robot_state_publisher and the joint_state_publisher GUI (for purely static transformations as asked in the beggining for Lab#3)
      
      ```
