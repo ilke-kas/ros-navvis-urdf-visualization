@@ -112,7 +112,7 @@ The launch file takes three arguments:
      
      ```
 
-    roslaunch navvis_description display.launch use_xacro:=true use_robot_state_publisher:=false use_joint_state_publisher_gui:=false
+      roslaunch navvis_description display.launch use_xacro:=true use_robot_state_publisher:=false use_joint_state_publisher_gui:=false
 
     ```
    
