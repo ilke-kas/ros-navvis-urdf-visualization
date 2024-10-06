@@ -110,11 +110,10 @@ The launch file takes three arguments:
    
    - #### rviz without both robot_state_publisher and the joint_state_publisher GUI (for purely static transformations as asked in the beggining for Lab#3)
      
-     ```
-
+  ```
       roslaunch navvis_description display.launch use_xacro:=true use_robot_state_publisher:=false use_joint_state_publisher_gui:=false
 
-    ```
+  ```
    
 ## Authors
 
