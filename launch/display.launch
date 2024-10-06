@@ -38,7 +38,7 @@ name="robot_state_publisher" />
 <!-- Static transform is added to the launch file  so that the wheels will
 show on the robot display when the joint_state_publisher_gui node is not running-->
   <!-- Static Transform Publisher for fixed transforms -->
-  <node unless="$(arg use_robot_state_publisher)" pkg="tf2_ros" type="static_transform_publisher" name="base_to_base_link" args="0 0 0 0 0 0 base base_link" />
+  <node unless="$(arg use_robot_state_publisher)" pkg="tf2_ros" type="static_transform_publisher" name="base_to_base_link" args="0 0 0 0 0 0 base_link base" />
   <node unless="$(arg use_robot_state_publisher)" pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_imu" args="0.0 0.0 0.0 3.1405788 0.0034281 3.1382064 base_link imu" />
   
   
