@@ -1,6 +1,6 @@
 # ECSE473 Modern Robotic Programming Laboratory 2
 
-The project directory structure is in this way as mentioned in Laboratory description:
+This project was developed as part of ECSE 473: Modern Robotic Programming – Laboratory 2, which focused on visualizing a mobile robot model using URDF in RViz. The lab involved constructing a robot description package (navvis_description) that defines the robot’s physical structure using XACRO files, establishes static transforms between key components (e.g., base_link, imu, camera), and integrates the model with robot_state_publisher for real-time visualization in ROS Noetic.
 
 ```
   navvis_description
